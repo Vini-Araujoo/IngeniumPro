@@ -14,7 +14,7 @@ function login(email, nome, senha) {
     .then(({ data }) => {
 
       alert(data);
-      window.location.href = 'http://localhost:5173/login'
+     
     })
     .catch(err => {
       console.log(err);

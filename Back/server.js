@@ -6,16 +6,20 @@ import Sequelize, { where } from 'sequelize';
 import path from 'path';
 import bodyParser from 'body-parser';
 import { type } from 'os';
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
+
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json()); // Para processar JSON
 
+
+
+
 // Configuração do banco de dados com Sequelize
-const sequelize = new Sequelize('IngeniumPro', 'root', '12345678', {
-    host: 'localhost',
+const sequelize = new Sequelize('teste', 'teste', '@Teste2025@', {
+    host: '186.226.60.39',
     dialect: 'mysql',
 });
 // Verificar a conexão com o banco
@@ -45,7 +49,7 @@ const Cadastros = sequelize.define('cadastro', {
 //Cadastros.sync({ force: true });
 
 // Resolver diretório raiz
-const __dirname = path.resolve();
+
 
 // Rota GET para retornar todos os cadastros
 app.get('/cadastro', async (req, res) => {
@@ -83,7 +87,7 @@ app.post('/enviar', async (req, res) => {
         });
 
         res.status(201).send(`Usuário cadastrado com sucesso! ID: ${novoUsuario.id}`);
-
+        window.location.href='localhost:5173/login'
         
     } catch (err) {
         console.log(err);
@@ -106,7 +110,7 @@ app.post('/login', async(req, res) =>{
 
     //comparando o email e a senha do usuario
     if(!user || !(await bcrypt.compare(senha, user.senha))){
-       return res.json({ error: 'Email ou senha inválidos' });
+        return res.status(401).json({ error: 'Email ou senha inválidos' });
         
     }
 
