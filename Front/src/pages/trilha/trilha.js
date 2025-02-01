@@ -143,13 +143,15 @@ export const Mod = styled.div`
 export const Modulos = styled.div`
     width: 10vw;
     height: 5vh;
-    border: 1px solid transparent;
-    border-image: linear-gradient(to top, rgba(4, 11, 16, 1), rgba(2, 188, 255, 1))10;
+    background-image: linear-gradient(to left, rgb(3, 18, 31, 1), rgb(1, 14, 21));
+    border-radius: 1rem;
+
+
     display: flex;  
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 20px;
+    padding: 25px;
 
     &:hover {
         transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
