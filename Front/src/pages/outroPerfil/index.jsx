@@ -120,8 +120,9 @@ function OutroPerfil() {
                         <Progresso>
 
                             <p>Detritos Espaciais</p>
-                            <ProgressBar now={progresso} label={`${progresso}%`} style={{ width: '27vw', height: '3.0vh', borderRadius: '2rem', fontSize: '1rem', fontStyle:'italic' }} />
 
+                            <ProgressBar now={progresso} style={{ width: '27vw', background: 'black', border: 'solid , rgba(2, 188, 255, 1), 1px', height: '3.0vh', borderRadius: '2rem', fontSize: '1rem' }} />
+                            {`${progresso}%`} Completo
                         </Progresso>
 
 

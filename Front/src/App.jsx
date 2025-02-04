@@ -8,8 +8,6 @@ import PrivateRoute from './PrivateRoutes';
 import Escolher from './pages/escolherEngenharia';
 import Perfil from './pages/perfil';
 import OutroPerfil from './pages/outroPerfil';
-import Conteudo from './pages/conteudo';
-import Modulos from './pages/modulos';
 import Sobre from './pages/sobre';
 import Equipe from './pages/equipe';
 import Problemas from './pages/problemas';
@@ -17,6 +15,8 @@ import Trilha from './pages/trilha';
 import Modulo0 from './pages/modulo0';
 import Aprendendo from './pages/aprendendo';
 import Entendendo from './pages/entendendo';
+import ModuloDinamico from './pages/dinamico';
+import Material from './pages/material';
 
 function App() {
   return (
@@ -46,12 +46,6 @@ function App() {
         {/*rota para exibir perfil*/}
         <Route path="/outroPerfil/:usuario" element={<OutroPerfil />} />
 
-        {/*rota para a arvore de conteudos*/}
-        <Route path="/conteudo" element={<PrivateRoute><Conteudo/></PrivateRoute>} />
-
-        {/*rota para os modulos*/}
-        <Route path="/conteudo/:id" element={<PrivateRoute><Modulos/></PrivateRoute>} />
-
         {/*rota para página sobre nós*/}
          <Route path="/sobre" element={<Sobre />} />
 
@@ -70,10 +64,14 @@ function App() {
         {/*rota para página de Aprendendo a Aprender*/}
         <Route path="/aprendendoaaprender" element={<PrivateRoute><Aprendendo/></PrivateRoute>} />
 
-        {/*rota para página de Aprendendo a Aprender*/}
+        {/*rota para página de Entendendo o problema*/}
         <Route path="/entendendooproblema" element={<PrivateRoute><Entendendo/></PrivateRoute>} />
 
+        {/*rota teste para os módulos*/}
+        <Route path="/modulo/:id" element={<PrivateRoute><ModuloDinamico/></PrivateRoute>} />
 
+        {/*rota teste para os módulos*/}
+        <Route path="/material/:id/:tipo" element={<PrivateRoute><Material/></PrivateRoute>} />
 
 
      

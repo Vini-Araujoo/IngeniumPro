@@ -2,7 +2,7 @@
 import cors from 'cors';
 import express from 'express';
 import bcrypt from 'bcrypt';
-import Sequelize, { where } from 'sequelize';
+import Sequelize, { ForeignKeyConstraintError, where } from 'sequelize';
 import path from 'path';
 import bodyParser from 'body-parser';
 import { type } from 'os';
@@ -77,6 +77,9 @@ const Modulo = sequelize.define('Modulo', {
         type: DataTypes.TEXT,
         allowNull: true,
     },
+    
+    
+
 });
 
 
@@ -89,8 +92,31 @@ const Progresso = sequelize.define('Progresso', {
     },
 });
 
+const Material = sequelize.define('Material',{
+
+    nome:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    conteudo:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    
+    },
+    tipo:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    foto:{
+        type: Sequelize.STRING
+    }
+
+
+})
+
 Cadastro.belongsToMany(Modulo, { through: 'Progresso' });
 Modulo.belongsToMany(Cadastro, { through: 'Progresso' });
+Material.belongsTo(Modulo, {foreignKey: 'modulosId'})
 
 
 // Sincronizar o modelo com o banco de dados (criação da tabela, apenas uma vez)
@@ -517,7 +543,19 @@ app.post('/marcar', verifyToken, async (req, res) => {
 })
 //------------------------------------------------------------------
 
-//Rota para barra de progresso do usuario
+app.post('/mostrarmaterial', async (req, res) =>{
+
+    const id_modulo = req.body.id
+    const tipo = req.body.tipo
+
+
+    const material = await Material.findAll({ where: { modulosId: id_modulo, tipo: tipo } });
+    console.log (material)
+
+    res.json(material)
+
+
+})
 
 
 

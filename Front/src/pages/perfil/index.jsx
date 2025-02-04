@@ -4,9 +4,9 @@ import {
     Main, Caixas, Topo, Img, Nomes, Meio, Final, Engenharia, Azul, Input,
     Botao, Botao2, FormPesquisa, Progresso
 } from './perfil';
-import energia from '../../assets/imagens/Energia.svg'
+
 import aero from '../../assets/imagens/Aeroespacial.svg'
-import manutencao from '../../assets/imagens/Manutencao.svg'
+
 
 import breve from '../../assets/imagens/Breve.svg'
 import { useEffect, useState } from 'react';
@@ -77,7 +77,7 @@ function Perfil() {
                 setEmailUsuario(usuario.email)
                 setDesdeUsuario(new Date(usuario.createdAt).toLocaleDateString('pt-BR'))
                 setPreview(usuario.foto); // Mostra a nova imagem após o upload
-                setProgresso(response.data.completos/5 *100)
+                setProgresso((response.data.completos/30 *100).toFixed(2))
                 console.log(progresso)
 
             })
@@ -207,8 +207,9 @@ function Perfil() {
                         <Progresso>
 
                             <p>Detritos Espaciais</p>
-                            <ProgressBar now={progresso} label={`${progresso}%`} style={{width:'27vw', height:'3.0vh', borderRadius:'2rem', fontSize:'1rem'}} />
                             
+                            <ProgressBar now={progresso}  style={{width:'27vw', background:'black', border: 'solid , rgba(2, 188, 255, 1), 1px', height:'3.0vh', borderRadius:'2rem', fontSize:'1rem'}} />
+                            {`${progresso}%`} Completo
                         </Progresso>
 
                         
