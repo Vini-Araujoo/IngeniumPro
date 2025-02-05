@@ -49,6 +49,7 @@ export const Form = styled.form`
     width: 1080px;
     height: 650px;
     border-radius: 1rem;
+    padding: 30px;
 `
 
 export const Azul = styled.span`
@@ -66,4 +67,5 @@ export const Inputs = styled.input`
     border: none;
     border-radius: 1rem;
     width: 16vw;
+    padding-left: 20px;
 `
