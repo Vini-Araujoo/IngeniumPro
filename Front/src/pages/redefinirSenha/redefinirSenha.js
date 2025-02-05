@@ -44,7 +44,7 @@ export const Fundo2 = styled.div`
 `
 
 export const Form = styled.form`
-    height: 450px;
+    height: 500px;
     width: 900px;
     background-color: rgba(4, 11, 16, 1);
     display: flex;
@@ -66,6 +66,7 @@ export const Inputs = styled.input`
     border: none;
     border-radius: 1rem;
     width: 16vw;
+    padding-left: 20px;
 `
 
 export const Azul = styled.span`

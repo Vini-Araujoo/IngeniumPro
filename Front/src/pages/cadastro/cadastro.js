@@ -82,6 +82,7 @@ export const Inputs = styled.input`
     border: none;
     border-radius: 1rem;
     width: 16vw;
+    padding-left: 20px;
 `
 
 export const Texto = styled.div`
