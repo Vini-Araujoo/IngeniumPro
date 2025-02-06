@@ -65,6 +65,14 @@ export const CaixaEsquerda = styled.div`
     background-color: rgba(4, 11, 16, 1); 
     box-shadow: 2px 2px;
     padding: 20px;
+
+
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 130vh;
+        width: 25vw;
+    }
 `
 export const Caixas = styled.div`
     display: flex;
@@ -85,7 +93,20 @@ export const CaixaDirCima = styled.div`
     border-radius: 1rem;
     border-image: linear-gradient(to top, rgba(4, 11, 16, 1), rgba(2, 188, 255, 1)) 1;  
     background-color: rgba(4, 11, 16, 1);     
-    box-shadow: 2px 2px rgb(0, 0, 0);  
+    box-shadow: 2px 2px rgb(0, 0, 0);
+
+    
+        @media (max-width: 768px) {
+        width: 30vw;
+        padding: 25px;
+        gap: 20px;
+        max-height: 80vh;
+    }
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 45vh;
+    }
 `
 
 export const CaixaDirBaixo = styled.div`
@@ -158,7 +179,7 @@ export const SalvarImg = styled.button`
     background-color: rgba(2, 188, 255, 0);
     color: white;
     width: 5vw;
-    height: 3vh;
+    height: 4vh;
     font-size: 15px;
     cursor: pointer;
     display: flex;
@@ -173,6 +194,7 @@ export const SalvarImg = styled.button`
         border-color: rgba(2, 188, 255, 1); /* Alterar a cor da borda */
         transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
     }
+
 `
 
 
@@ -196,13 +218,17 @@ export const Botao = styled.button`
         transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
     }
 
+    @media (max-height: 768px) {
+        height: 5.5vh;
+        width: 6vw;
+    }
 `;
 
 export const Botao2 = styled.button`
     background-color: rgba(2, 188, 255, 0);
     color: white;
     width: 5vw;
-    height: 3vh;
+    height: 4vh;
     font-size: 15px;
     cursor: pointer;
     display: flex;
@@ -217,6 +243,8 @@ export const Botao2 = styled.button`
         border-color: rgba(2, 188, 255, 1); /* Alterar a cor da borda */
         transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
     }
+
+    
 
 `;
 
