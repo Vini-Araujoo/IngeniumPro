@@ -6,6 +6,8 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     margin-top: 50px
+
+
 `;
 
 export const Header = styled.header`
@@ -34,18 +36,45 @@ export const Corpo = styled.div`
     border: 1px solid transparent;
     border-radius: 1rem;
     border-image: linear-gradient(to top, rgba(4, 11, 16, 1), rgba(2, 188, 255, 1)) 1;
+
+    @media (max-width: 768px) {
+        width: 90vw;
+        padding: 20px;
+        gap: 20px;
+        max-height: 80vh;
+    }
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 110vh;
+    }
 `
 
 export const Esquerda = styled.div`
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 90px;
     background-color: #040B10;
     width: 30vw;
     height: 65vh;
     flex-direction: column;
     color: #fff;
+
+    @media (max-width: 768px) {
+        width: 30vw;
+        padding: 25px;
+        gap: 20px;
+        max-height: 80vh;
+    }
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        gap: 140px;
+        height: 80vh;
+    }
 `
 
 export const Direita = styled.div`
@@ -57,6 +86,18 @@ export const Direita = styled.div`
     width: 30vw;
     height: 65vh;
     border-radius: 1rem;
+
+        @media (max-width: 768px) {
+        width: 30vw;
+        padding: 25px;
+        gap: 20px;
+        max-height: 80vh;
+    }
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 95vh;
+    }
 `
 
 export const Form = styled.form`
@@ -74,6 +115,18 @@ export const Form = styled.form`
     padding-top: 3rem;
     background-color: #040B10;
     color: #fff;
+
+    @media (max-width: 768px) {
+        width: 30vw;
+        padding: 25px;
+        gap: 20px;
+        max-height: 80vh;
+    }
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 80vh;
+    }
 `
 
 export const Inputs = styled.input`
