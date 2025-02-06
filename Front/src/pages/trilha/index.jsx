@@ -92,15 +92,10 @@ function Trilha(){
 
                         <Link href="http://localhost:5173/modulo/5">
                             <Modulos>
-                                <TextoInterno>Física Clássica e Moderna</TextoInterno>
-                            </Modulos>                            
-                        </Link>
-
-                        <Link href="http://localhost:5173/modulo/6">
-                            <Modulos>
                                 <TextoInterno>Programação e Algoritimos</TextoInterno>
                             </Modulos>                            
                         </Link>
+
                     </Mod>
                 </Caixa>
 
