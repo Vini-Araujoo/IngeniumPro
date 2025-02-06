@@ -85,7 +85,7 @@ export const Imagem = styled.div`
     }
 
     img {
-        max-width: 100%;
+        width: 100%;
         max-height: 100%;
     }
 `
@@ -133,6 +133,13 @@ export const Caixa = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 45vh;
+        width: 50vw;
+    }
 `
 
 export const Nome = styled.p`

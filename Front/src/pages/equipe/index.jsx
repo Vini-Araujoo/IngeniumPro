@@ -4,6 +4,8 @@ import vini from '../../assets/imagens/fotoVini.jpg'
 import nicole from '../../assets/imagens/fotoNicole.png'
 import guilherme from '../../assets/imagens/fotoGuilherme.png'
 import bruno from '../../assets/imagens/fotoBruno.png'
+import arthur from '../../assets/imagens/fotoArthur.jpg'
+import igor from '../../assets/imagens/fotoIgor.png'
 
 function Equipe() {
     return (
@@ -56,12 +58,12 @@ function Equipe() {
                         <Nome>Bruno</Nome>
                     </div>
                     <div>
-                        <Imagem></Imagem>
-                        <Nome>Nome 1</Nome>
+                        <a href="#arthur"><Imagem><img src={arthur} alt="Foto Arthur" /></Imagem></a>
+                        <Nome>Arthur</Nome>
                     </div>
                     <div>
-                        <Imagem></Imagem>
-                        <Nome>Nome 2</Nome>
+                        <a href="#igor"><Imagem><img src={igor} alt="Foto Igor" /></Imagem></a>
+                        <Nome>Igor</Nome>
                     </div>
                 </ImagensP2>
 
@@ -85,6 +87,18 @@ function Equipe() {
 
                 <Caixa id="bruno">
                     <h2><Azul>Bruno</Azul></h2>
+                    <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
+                </Caixa>
+
+
+                <Caixa id="arthur">
+                    <h2><Azul>Arthur</Azul></h2>
+                    <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
+                </Caixa>
+
+
+                <Caixa id="igor">
+                    <h2><Azul>Igor</Azul></h2>
                     <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
                 </Caixa>
             </Main>
