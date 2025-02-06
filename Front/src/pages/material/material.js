@@ -77,7 +77,7 @@ export const Card = styled.a`
 `
 export const Container = styled.div`
     display: flex;
-    gap: 100px;
+    gap: 150px;
 
         @media (max-width: 1200px) {
         flex-direction: column;
@@ -85,7 +85,7 @@ export const Container = styled.div`
     }
 `
 export const Cima = styled.div`
-    width: 200px;
+    width: 250px;
     height: 300px;
     background-color: rgba(4, 11, 16, 1);
     border-radius: 1rem 1rem 0rem 0rem;
@@ -104,8 +104,8 @@ export const Cima = styled.div`
 
 `
 export const Baixo = styled.div`
-    width: 200px;
-    height: 70px;
+    width: 250px;
+    height: 80px;
     background-color: rgba(4, 11, 16, 1); 
     display: flex;   
     align-items: center;

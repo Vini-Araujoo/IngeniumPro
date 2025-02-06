@@ -1,5 +1,5 @@
 import logo from '../../assets/imagens/logo.svg'
-import { Nav, NavBar, NavLinks, Caixa, Main, Topo, Azul, Titulo, Linha, Baixo, Click, Bolinha, Link, CantoDir } from './teste';
+import { Nav, NavBar, NavLinks, Caixa, Main, Topo, Azul, Titulo, Linha, Baixo, Click, Bolinha, Link, CantoDir, BotaoMarcar } from './teste';
 import api from '../../services/api';
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
@@ -155,7 +155,7 @@ function ModuloDinamico() {
                         </Link>
 
                         <form onSubmit={handleSubmit}>
-                            <button type="submit" onClick={handleClick} >{clicked ? "Marcar como concluido" : "Desmarcar"}</button>
+                            <BotaoMarcar type="submit" onClick={handleClick} >{clicked ? "Marcar como concluido" : "Desmarcar"}</BotaoMarcar>
                         </form>
                     </Baixo>
                     <CantoDir>

@@ -73,9 +73,9 @@ export const Caixa = styled.div`
         max-height: 80vh;
     }
 
-    @media (max-height: 750px) {
+    @media (max-height: 768px) {
         padding: 30px;
-        height: 140vh;
+        height: 160vh;
     }
 
 `

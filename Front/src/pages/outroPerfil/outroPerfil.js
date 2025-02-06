@@ -57,6 +57,12 @@ export const CaixaEsquerda = styled.div`
     background-color: rgba(4, 11, 16, 1); 
     box-shadow: 2px 2px;
     padding: 20px;
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 130vh;
+        width: 25vw;
+    }
 `
 export const Caixas = styled.div`
     display: flex;
@@ -78,6 +84,13 @@ export const CaixaDirCima = styled.div`
     border-image: linear-gradient(to top, rgba(4, 11, 16, 1), rgba(2, 188, 255, 1)) 1;  
     background-color: rgba(4, 11, 16, 1);     
     box-shadow: 2px 2px rgb(0, 0, 0);  
+
+        
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 45vh;
+    }
 `
 
 export const CaixaDirBaixo = styled.div`
