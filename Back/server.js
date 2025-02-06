@@ -492,22 +492,6 @@ app.post('/requisitar', verifyToken, async (req, res) => {
 
     }
 
-    console.log(Modulo.associations)
-    const cadastro = await Cadastro.findOne({
-        where: { usuario: 'if you die' },
-        include: Modulo, // Inclui os progressos associados
-        through: {
-            attributes: ['completed'], // Campos da tabela intermediária (Progresso)
-        },
-    });
-
-    if (cadastro) {
-        // Itera pelos módulos associados
-        cadastro.Modulos.forEach((modulo) => {
-            console.log(`Módulo: ${modulo.title}`);
-            console.log(`Progresso: ${modulo.Progresso.completed ? 'Concluído' : 'Pendente'}`);
-        });
-    }
 
 })
 
@@ -557,7 +541,45 @@ app.post('/mostrarmaterial', async (req, res) =>{
 
 })
 
+//----------------------------------------------------------------------
+//rota para verificar se o modulo especifico foi concluido
 
+app.post('/modulo', verifyToken, async (req, res) => {
+
+    //buscar dados do usuario
+    const id_modulo = req.body.id
+    console.log("-----------------------------------------------")
+    console.log(id_modulo)
+    var completo
+
+    try {
+        const conclusao = await Progresso.findOne({
+          where: {
+            cadastroId: req.userId,
+            Moduloid: id_modulo,
+          },
+        });
+    
+        if (conclusao.completed == 1) {
+          console.log('concluido')
+          completo = 1
+          return res.json({completo})
+        } 
+        if(conclusao.completed == 0){
+            console.log('nao concluido')
+            completo = 0
+            return res.json({completo})
+            
+        }
+    } 
+    catch (err) {
+        console.error(err);
+        return res.status(500).json({ error: 'Erro ao verificar conclusão do módulo' });
+      }
+
+      
+
+});
 
 
 

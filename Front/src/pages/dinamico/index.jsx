@@ -11,7 +11,41 @@ function ModuloDinamico() {
 
     const [titulo, SetTitulo] = useState('')
     const [descricao, SetDescricao] = useState('')
-    const [clicked, setClicked] = useState(false);
+    const [clicked, setClicked] = useState('');
+    
+
+    function modulo(id) {
+        api
+            .post('/modulo', { id }, {
+                headers: {
+
+                    'Authorization': decodede.data
+                },
+            }
+            )
+            .then((completo) => {
+               if(completo.data.completo == 1){
+                setClicked(true)
+               }
+               else{
+                setClicked(false)
+               }
+               
+            })
+
+            .catch(err => {
+                // Exibindo a mensagem de erro retornada pela API, caso ocorra um erro (vem pelo campo error do json)
+                if (err.response.data.error) {
+                    alert(err.response.data.error); // Exibe a mensagem de erro
+                } else {
+                    alert('Erro inesperado! Tente novamente mais tarde.'); // Erro genérico
+                }
+            });
+
+
+    }
+  
+    
 
     const token = sessionStorage.getItem("authToken")
     const decodede = JSON.parse(token);
@@ -33,7 +67,7 @@ function ModuloDinamico() {
             setClicked(false)
     };
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
         marcar(id)
     }
@@ -69,6 +103,7 @@ function ModuloDinamico() {
     useEffect(() => {
 
         requisitar(id); // Chamada quando o componente é montado
+        modulo(id);
 
     }, []); // O array vazio [] garante que só será chamado uma vez
 
@@ -155,7 +190,7 @@ function ModuloDinamico() {
                         </Link>
 
                         <form onSubmit={handleSubmit}>
-                            <BotaoMarcar type="submit" onClick={handleClick} >{clicked ? "Marcar como concluido" : "Desmarcar"}</BotaoMarcar>
+                            <BotaoMarcar type="submit" onClick={handleClick} >{clicked ? "Desmarcar" : "Marcar como concluído"}</BotaoMarcar>
                         </form>
                     </Baixo>
                     <CantoDir>
