@@ -42,7 +42,7 @@ function OutroPerfil() {
                 setEmailUsuario(usuario.email)
                 setDesdeUsuario(new Date(usuario.createdAt).toLocaleDateString('pt-BR'))
                 setPreview(usuario.foto); // Mostra a nova imagem após o upload
-                setProgresso(response.data.completos / 5 * 100)
+                setProgresso((response.data.completos / 30 * 100).toFixed(2))
 
             })
 
