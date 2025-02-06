@@ -63,6 +63,18 @@ export const Caixa = styled.div`
     background-color: rgba(4, 11, 16, 1);
     box-shadow: 1.5px 2px 3px black;
 
+    @media (max-width: 768px) {
+        width: 90vw;
+        padding: 25px;
+        gap: 20px;
+        max-height: 80vh;
+    }
+
+    @media (max-height: 750px) {
+        padding: 30px;
+        height: 140vh;
+    }
+
 `
 
 export const Topo = styled.div`
@@ -144,4 +156,19 @@ export const CantoDir = styled.div`
     height: 30px;
     display: flex;
     justify-content: flex-end;
+`
+
+export const BotaoMarcar = styled.button`
+    border-radius: 1rem;
+    width: 10vw;
+    height: 5vh;
+    background-color: rgba(4, 11, 16, 1);
+    color: #fff;
+
+        transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05); /* Aumenta levemente o tamanho */
+        color: rgba(2, 188, 255, 1); /* Altera a cor do texto */
+    }
 `
