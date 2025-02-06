@@ -63,6 +63,17 @@ export const Caixa = styled.div`
     background-color: rgba(4, 11, 16, 1);
     box-shadow: 1.5px 2px 3px black;
 
+        @media (max-width: 768px) {
+        width: 90vw;
+        padding: 25px;
+        gap: 20px;
+        max-height: 80vh;
+    }
+
+    @media (max-height: 768px) {
+        padding: 30px;
+        height: 120vh;
+    }
 `
 
 export const Topo = styled.div`
