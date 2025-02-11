@@ -77,7 +77,11 @@ function Equipe() {
 
                 <Caixa id="nicole">
                     <h2><Azul>Nicole</Azul></h2>
-                    <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
+                    <p>
+                        Estudante cursando o 2° semestre de Engenharia de Software da Universidade de Brasília e o 3° semestre de
+                        Direito no UniCEUB. Participou ativamente da realização da pesquisa, desenvolveu o embasamento teórico 
+                        e selecionou o material de apoio referente ao desafio até então selecionado.
+                    </p>
                 </Caixa>
 
                 <Caixa id="guilherme">
@@ -99,7 +103,10 @@ function Equipe() {
 
                 <Caixa id="igor">
                     <h2><Azul>Igor</Azul></h2>
-                    <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
+                    <p>
+                        Atuou como orientador da equipe, auxiliando Vinícius na definição das sprints e seus prazos. 
+                        Além disso, forneceu suporte técnico na área de programação.
+                    </p>
                 </Caixa>
             </Main>
         </div>
