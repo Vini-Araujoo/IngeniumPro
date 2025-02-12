@@ -86,18 +86,30 @@ function Equipe() {
 
                 <Caixa id="guilherme">
                     <h2><Azul>Guilherme</Azul></h2>
-                    <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
+                    <p>
+                        Estudante cursando o 2° semestre de Engenharia de Software da Universidade de Brasília.
+                        Responsável pelo desenvolvimento do back-end e pela criação do banco de dados. Trabalhou 
+                        em conjunto com Vinícius na integração do sistema.
+                    </p>
                 </Caixa>
 
                 <Caixa id="bruno">
                     <h2><Azul>Bruno</Azul></h2>
-                    <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
+                    <p>
+                        Estudante cursando o 2° semestre de Engenharia de Software da Universidade de Brasília.
+                        Responsável pela realização de pesquisas, desenvolvimento dos módulos e materiais de estudo, 
+                        bem como pela estruturação do conteúdo a ser aprendido.
+                    </p>
                 </Caixa>
 
 
                 <Caixa id="arthur">
                     <h2><Azul>Arthur</Azul></h2>
-                    <p>Lorem ipsum dolor sit amet. Aut commodi voluptatem ut asperiores repellendus est perspiciatis.</p>
+                    <p>
+                        Estudante cursando o 2° semestre de Engenharia de Software da Universidade de Brasília.
+                        Responsável pela realização de pesquisas, desenvolvimento dos módulos e materiais de estudo, 
+                        bem como pela estruturação do conteúdo a ser aprendido.
+                    </p>
                 </Caixa>
 
 
